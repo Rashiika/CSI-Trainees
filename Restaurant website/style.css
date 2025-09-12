@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;         /* dark background */
+  color: white;
+  padding: 15px 8%;
+  position: sticky;         /* stays at top */
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #f4b400;   /* yellow on hover */
+}
+
+/* ✅ Mobile Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;  /* hide links on small screen */
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    right: 8%;
+    width: 200px;
+    padding: 10px;
+  }
+
+  .nav-links.show {
+    display: flex; /* this would show menu if we had JS */
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}
