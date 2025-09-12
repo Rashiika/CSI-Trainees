@@ -60,3 +60,68 @@
     font-size: 1.2rem;
   }
 }
+/* Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Background slides */
+.slide {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeSlideshow 16s infinite;
+  z-index: -2;
+}
+
+/* Each slide image */
+.slide1 { background-image: url('images/restaurant1.jpeg'); animation-delay: 0s; }
+.slide2 { background-image: url('images/restaurant2.jpg'); animation-delay: 4s; }
+.slide3 { background-image: url('images/kitchen.jpg'); animation-delay: 8s; }
+.slide4 { background-image: url('images/food.jpg'); animation-delay: 12s; }
+
+/* Dark overlay */
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+/* Slideshow fade animation */
+@keyframes fadeSlideshow {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  25%  { opacity: 1; }
+  30%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Hero content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.btn{
+    color: #dc1f1f;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
